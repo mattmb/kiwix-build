@@ -15,8 +15,8 @@ class ArmhfPlatformInfo(PlatformInfo):
             'binaries': self.binaries,
             'exe_wrapper_def': '',
             'root_path': self.root_path,
-            'extra_libs': [],
-            'extra_cflags': ['-I{}'.format(pj(self.buildEnv.install_dir, 'include'))],
+            'extra_libs': ['-march=armv7-a', '-mfpu=vfpv3', '-mfloat-abi=hard'],
+            'extra_cflags': ['-march=armv7-a', '-mfpu=vfpv3', '-mfloat-abi=hard', '-I{}'.format(pj(self.buildEnv.install_dir, 'include'))],
             'host_machine': {
                 'system': 'linux',
                 'lsystem': 'linux',

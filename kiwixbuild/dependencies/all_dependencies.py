@@ -15,7 +15,7 @@ class AllBaseDependencies(Dependency):
             if platformInfo.build == "wasm":
                 return ['zlib', 'lzma', 'zstd', 'icu4c', 'xapian-core']
 
-            base_deps = ['zlib', 'lzma', 'zstd', 'xapian-core', 'pugixml', 'libcurl', 'icu4c', 'mustache', 'libmicrohttpd', 'zim-testing-suite']
+            base_deps = ['zlib', 'lzma', 'zstd', 'xapian-core', 'pugixml', 'libcurl', 'icu4c', 'mustache', 'libmicrohttpd', 'zim-testing-suite', 'libwebp']
             # Add specific dependencies depending of the platform
             if platformInfo.build not in ('android', 'iOS'):
                 # For zimtools
